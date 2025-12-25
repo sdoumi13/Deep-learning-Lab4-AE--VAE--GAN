@@ -61,7 +61,7 @@ def reparameterize(self, mu, logvar):
     std = torch.exp(0.5 * logvar)
     eps = torch.randn_like(std)  # Bruit aléatoire
     return mu + eps * std
-
+```
  **Sans cette astuce, l’entraînement du VAE serait impossible.**
 
 ---
